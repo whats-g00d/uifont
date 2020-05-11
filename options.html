@@ -1,27 +1,22 @@
 <html>
 <head><title>Change Font Style Options</title>
 <script src="scripts.js"></script>
+<style>
+* {
+	color: #fff;
+	background-color: #000;
+	font-family: Consolas, monospace;
+	font-size: 14px!important;
+}
+</style>
 </head>
-
-
 <body>
+	<p style="text-align:right;"><a href="https://github.com/dsivasuthan/change-all-ui-fonts">source</a></p>
+	<span>font-name:</span>
+	<input id="font_name" type="text" name="font_name" value="" size="50" placeholder="Consolas"><br><br>
+	<button id="click-this">save</button>
+	<br>
+	<span id="status"></span>
 
-Font to use on webpages:
-<input type="text" name="font_name" value="" size="50">
-<!--
-<select id="color">
- <option value="red">red</option>
- <option value="green">green</option>
- <option value="blue">blue</option>
- <option value="yellow">yellow</option>
-</select>
--->
-
-<br>
-<button id="click-this">save</button>
-
-<span id="status"></span>
-<br>
-maintained by <a href=http://sivasuthan.com>Sivasuthan Dhayalan.</a>
 </body>
 </html>
