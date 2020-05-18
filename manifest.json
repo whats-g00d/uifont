@@ -14,7 +14,7 @@
    
    "name": "change all UI fonts",
    "options_page": "options.html",
-   "version": "1.2",
+   "version": "1.4.1",
    "browser_action": {
     "default_icon": "icon.png",
     "default_title": "change font family",
