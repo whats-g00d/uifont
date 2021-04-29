@@ -12,9 +12,29 @@
 </head>
 <body>
 	<p style="text-align:right;"><a href="https://github.com/dsivasuthan/change-all-ui-fonts">source</a></p>
-	<span>font-name:</span>
-	<input id="font_name" type="text" name="font_name" value="" size="50" placeholder="Consolas"><br><br>
-	<button id="click-this">save</button>
+	<div style="padding: 10px; border: grey 1px solid; ">
+		<span>font-name:</span>
+		<input id="font_name" type="text" name="font_name" value="" size="50" placeholder="Consolas"><br><br>
+		<button id="save-fontname">save</button>
+	</div>
+	<br>
+
+	<div style="padding: 10px; border: grey 1px solid; ">
+		<p>add exception:</p>
+		<input id="url" type="text" name="url" value="" size="50"><br><br>
+		<button id="add-exception">add exception</button>
+	</div>
+	<br>
+
+	<div style="padding: 10px; border: grey 1px solid; ">
+		<p>added exceptions:</p>
+		<select name="urls" id="urls">
+		</select>
+		<br>
+		<br>
+		<button id="remove-exception">remove exception</button>
+	</div>
+
 	<br>
 	<span id="status"></span>
 
