@@ -10,17 +10,51 @@ function save_options() {
 
 }
 
+
 function restore_options() {
 
-  var favorite = localStorage["fontname"];
-  if (!favorite) {
+  chrome.storage.sync.get('fontname', (data) => {
+
+    if (!data.fontname) {
     return;
   }
   
   var input = document.getElementById("font_name");
+    
   if (input) {
-    input.value = favorite;
+      input.value = data.fontname;
+    }
+
+  });
+
+  chrome.storage.sync.get('exceptions', (data) => {
+
+    var exceptions = data.exceptions;
+
+    if (!exceptions) {
+      return;
+    }
+
+    var urls = document.getElementById("urls");
+    var count = 0;
+
+    exceptions.forEach(element => {
+
+      var option = document.createElement("option");
+      option.text = element;
+      option.value = count;
+
+      if (urls) {
+        urls.add(option);
   }
+
+      count++;
+
+    });
+
+  });
+
+  
 
 }
 
